@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Imposter - A fun spy party game for friends. Find the imposter among your group!">
+    <meta name="theme-color" content="#0f0a1a">
+    <title>Imposter - Spy Party Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'heading': ['Outfit', 'Noto Sans Arabic', 'sans-serif'],
+                        'body': ['Inter', 'Noto Sans Arabic', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#0f0a1a',
+                            800: '#1a1128',
+                            700: '#251a36',
+                            600: '#302344',
+                            500: '#3b2c52',
+                        },
+                        accent: {
+                            purple: '#a855f7',
+                            blue: '#6366f1',
+                            cyan: '#22d3ee',
+                            pink: '#ec4899',
+                            green: '#10b981',
+                            orange: '#f97316',
+                            red: '#ef4444',
+                        },
+                        glass: {
+                            light: 'rgba(255, 255, 255, 0.06)',
+                            medium: 'rgba(255, 255, 255, 0.10)',
+                            heavy: 'rgba(255, 255, 255, 0.15)',
+                            border: 'rgba(255, 255, 255, 0.12)',
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-dark-900 text-white font-body min-h-screen overflow-x-hidden">
+    <!-- Background animation canvas -->
+    <canvas id="bg-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+    
+    <!-- App Container -->
+    <div id="app" class="relative z-10 min-h-screen flex flex-col"></div>
+
+    <!-- Background Music Elements -->
+    <audio id="bg-music" src="js/assets/bg.mp3" loop preload="auto"></audio>
+    <audio id="game-music" src="js/assets/game.mp3" loop preload="auto"></audio>
+
+    <!-- Scripts -->
+    <script src="js/assets/icons.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/wordPacks.js"></script>
+    <script src="js/sounds.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/confetti.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/gameEngine.js"></script>
+    <script src="js/screens/homeScreen.js"></script>
+    <script src="js/screens/lobbyScreen.js"></script>
+    <script src="js/screens/roleRevealScreen.js"></script>
+    <script src="js/screens/discussionScreen.js"></script>
+    <script src="js/screens/votingScreen.js"></script>
+    <script src="js/screens/imposterGuessScreen.js"></script>
+    <script src="js/screens/resultsScreen.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
